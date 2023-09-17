@@ -7,6 +7,26 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Bulky.DataAccess\**" />
+    <Compile Remove="Bulky.Models\**" />
+    <Compile Remove="Bulky.Utitities\**" />
+    <Content Remove="Bulky.DataAccess\**" />
+    <Content Remove="Bulky.Models\**" />
+    <Content Remove="Bulky.Utitities\**" />
+    <EmbeddedResource Remove="Bulky.DataAccess\**" />
+    <EmbeddedResource Remove="Bulky.Models\**" />
+    <EmbeddedResource Remove="Bulky.Utitities\**" />
+    <None Remove="Bulky.DataAccess\**" />
+    <None Remove="Bulky.Models\**" />
+    <None Remove="Bulky.Utitities\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove=".gitattributes" />
+    <None Remove=".gitignore" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.10" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.10" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.10">
@@ -14,6 +34,11 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="7.0.9" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="Bulky.DataAccess\Bulky.DataAccess.csproj" />
+    <ProjectReference Include="Bulky.Models\Bulky.Models.csproj" />
   </ItemGroup>
 
 </Project>
